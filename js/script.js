@@ -7,9 +7,15 @@
 	and alerts the user what the sum is.
 */ 
 
+var additionButton = document.getElementById('additionButton');
+
 function addition() {
-	// your code goes here!
+	var num1 = parseInt(document.getElementById('additionInput1').value); 
+	var num2 = parseInt(document.getElementById('additionInput2').value);
+	alert("sum is: " + (num1 + num2));
+
 }
+
 
 /* --------------------------------------------------------- */
 
@@ -26,8 +32,24 @@ function addition() {
 	then the text should say "That sentence has 1 vowel in it." - 
 	note the lack of plurality on the word vowel.
 */ 
+var vowelButton = document.getElementById('vowelButton');
 
 function vowelCounter() {
+	var word = document.getElementById('vowelInput').value;
+	var count = 0;
+
+	for(var i = 0; i < word.length; i++) {
+		if(word[i] == 'a' || word[i] =='e' || word[i]== 'i' || word[i]== 'o' || word[i] == 'u')
+		{
+			++count;
+		}
+
+	}
+
+	vowelInput.value = "The sentence has " + count + " in it.";
+
+
+
 	// your code goes here!
 }
 
@@ -63,6 +85,9 @@ function submit() {
 }
 
 function reset() {
+	vowelInput.value = " "; 
+	additionInput2.value = " ";
+	additionInput1.value = " ";
 
 }
 
